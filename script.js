@@ -25,10 +25,10 @@ class Factory{
     this.warranty = '60,000 miles / 3 years';
   }
     massBuild(quantity, options){
-      console.log("Building " + quantity + options.color + options.trim + options.model +"'s");
+      console.log("Building " + quantity + " " + options.color + " " + options.trim + " " + options.model +"'s");
     }
     customerBuild(color, options){
-      console.log("Building one" + color + this.trim + this.model + "with the following options: " + options + ".");
+      console.log("Building one " + color + " " + this.trim + " " + this.model + " with the following options: " + options + ".");
     }
 
 }
@@ -142,8 +142,7 @@ mazda3.massBuild("35,000", mazda3);
 // Print, calling customerBuild(), building one yellow mazda3 with the following options, as an array: weather package, satellite radio, rear spoiler.
 // It should read: "Building one yellow Touring Mazda3 with the following options: weather package, satellite radio, rear spoiler"
 // Write your code below:
-// console.log(customerBuild);
-
+mazda3.customerBuild("yellow", [" weather package", " satellite radio", " rear spoiler"]);
 
 
 // MIATA-RF MASS PRODUCTION
@@ -167,23 +166,15 @@ let miataRf = new Sport
 // Write your code below:
 console.log(miataRf);
 
-
-
-
 // Print miataRf, calling massBuild(), building 15,000
 // It should print: "Building 15000 Red Grand Touring Miata-RF's."
 // Write your code below:
-
-
-
-
+miataRf.massBuild("15,000", miataRf);
 
 // Print miataRf, calling customerBuild(), building one black Miata-Rf with the following options, as an array: hid headlights, sports suspension, leather steering wheel, heated seats, adaptive cruise control.
 // It should read: "Building one black Grand Touring Miata-RF with the following options: hid headlights, sports suspension, leather steering wheel, heated seats, adaptive cruise control"
 // Write your code below:
-
-
-
+miataRf.customerBuild("black", ["hd headlights", " sports suspension", " leather steering wheel", " heated seats", " adaptive cruise control"]);
 
 // TRAIL BLAZER MASS PRODUCTION
 // The Trail Blazer should inherit from truck.
@@ -201,21 +192,16 @@ let trailBlazer = new Truck
   trailBlazer.navigation = true
   trailBlazer.doors = "2"
 
-
 // Print trailBlazer. It should have all the above properties. Plus, the extended warranty.
 // Write your code below:
 console.log(trailBlazer);
 
-
-
 // Print trailBlazer, calling massBuid(). It should build 35000 trucks.
 // It should print: "Building 35000 blue Sport Trail Blazer's."
 // Wrint your code below:
-
-
-
-
+trailBlazer.massBuild("35,000", trailBlazer);
 
 // Print trailBlazer, calling customerBuild(). It should build a red Trail Blazer with the following options, as an array: seat warmers, tinted windows, fog lamps.
 // It should print: "Building one red Sport Trail Blazer with the following options: seat warmers, tinted windows, fog lamps"
 // Write your code below:
+trailBlazer.customerBuild("red", ["seat warmers", " tinted windows", " fog lamps"]);
